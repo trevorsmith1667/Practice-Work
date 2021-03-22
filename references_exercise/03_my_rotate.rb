@@ -11,7 +11,20 @@
 
 
 def my_rotate!(array, amt)
-
+    if amt >= 0 
+        amt.times do 
+        ele = array.shift
+        array << ele 
+        array
+        end 
+    else 
+        (-amt).times do 
+            ele = array.pop
+            array.unshift(ele)
+            array
+        end 
+    end 
+    array
 end
 
 
