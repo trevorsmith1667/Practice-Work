@@ -7,8 +7,23 @@
 # to be the same before and after calling your method.
 
 def ele_replace!(array, hash)
-
+    array.each_with_index do |ele, i| 
+        if hash[ele] 
+            array[i] = hash[ele]
+        end 
+    end 
+    array
 end
+
+# def ele_replace!(array, hash)
+#     array.map! do |ele|
+#         if hash.has_key?(ele)
+#             hash[ele]
+#         else 
+#             ele
+#         end 
+#     end 
+# end 
 
 
 array_1 = [4, 2, 0, 2]
